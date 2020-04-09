@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 import requests
+import os,sys
 
 #给100002 到 100099  集体发送邮件。
 id = 100002
@@ -54,8 +56,8 @@ def chong_zhi_yuan_bao(type, id, item, checknum):
 #chong_zhi_yuan_bao("recharge" ,100002, 114, 'qwe')
 
 #10元冲1500w
-for num in range(1,10):
-    chong_zhi_yuan_bao("recharge" , 100002 , 114, 'qwe')
+# for num in range(1,10):
+#     chong_zhi_yuan_bao("recharge" , 100002 , 114, 'qwe')
 
 # for num in range(100002,100099):
 #     chong_zhi_yuan_bao("recharge" ,num, 114, 'qwe')
@@ -63,5 +65,9 @@ for num in range(1,10):
 
 
 
-
+if __name__ == '__main__':
+    id = sys.argv[1]
+    #chong_zhi_yuan_bao("recharge", id, 114, 'qwe')
+    for num in range(100002,100399):
+        chong_zhi_yuan_bao("recharge" ,num, 114, 'qwe')
 

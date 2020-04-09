@@ -17,13 +17,13 @@ namespace client
         private static byte[] result = new byte[1024];
         static void Main(string[] args)
         {
-            string serverIP = "106.52.97.201";
+            string serverIP = "127.0.0.1";
             //设定服务器IP地址 
             IPAddress ip = IPAddress.Parse(serverIP);
             Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
-                clientSocket.Connect(new IPEndPoint(ip, 12345)); //配置服务器IP与端口 
+                clientSocket.Connect(new IPEndPoint(ip, 4399)); //配置服务器IP与端口 
                 Console.WriteLine("连接服务器成功");
             }
             catch

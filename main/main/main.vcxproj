@@ -118,30 +118,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\c++\common.h" />
-    <ClInclude Include="..\..\c++\cppYuFa.h" />
-    <ClInclude Include="..\..\c++\my_string.h" />
-    <ClInclude Include="..\..\c++\p_class.h" />
-    <ClInclude Include="..\..\c++\sort.h" />
-    <ClInclude Include="..\..\c++\stream.h" />
-    <ClInclude Include="..\..\c++\template.h" />
+    <ClInclude Include="..\..\Language\c++\common.h" />
+    <ClInclude Include="..\..\Language\c++\cppYuFa.h" />
+    <ClInclude Include="..\..\Language\c++\my_string.h" />
+    <ClInclude Include="..\..\Language\c++\p_class.h" />
+    <ClInclude Include="..\..\Language\c++\sort.h" />
+    <ClInclude Include="..\..\Language\c++\stream.h" />
+    <ClInclude Include="..\..\Language\c++\template.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\c++\cppyufa.cpp" />
-    <ClCompile Include="..\..\c++\DuoTai.cpp" />
-    <ClCompile Include="..\..\c++\main.cpp" />
-    <ClCompile Include="..\..\c++\my_string.cpp" />
-    <ClCompile Include="..\..\c++\p_class.cpp" />
-    <ClCompile Include="..\..\c++\sort.cpp" />
-    <ClCompile Include="..\..\c++\stream.cpp" />
-    <ClCompile Include="..\..\c++\template.cpp" />
-    <ClCompile Include="..\..\c++\vector.cpp" />
+    <ClCompile Include="..\..\Language\c++\cppyufa.cpp" />
+    <ClCompile Include="..\..\Language\c++\DuoTai.cpp" />
+    <ClCompile Include="..\..\Language\c++\duoTai_2.cpp" />
+    <ClCompile Include="..\..\Language\c++\main.cpp" />
+    <ClCompile Include="..\..\Language\c++\my_string.cpp" />
+    <ClCompile Include="..\..\Language\c++\p_class.cpp" />
+    <ClCompile Include="..\..\Language\c++\sort.cpp" />
+    <ClCompile Include="..\..\Language\c++\stream.cpp" />
+    <ClCompile Include="..\..\Language\c++\template.cpp" />
+    <ClCompile Include="..\..\Language\c++\test_opencv.cpp" />
+    <ClCompile Include="..\..\Language\c++\vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\c++\test.log" />
+    <Text Include="..\..\Language\c++\test.log" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\c++\Makefile" />
+    <None Include="..\..\Language\c++\Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

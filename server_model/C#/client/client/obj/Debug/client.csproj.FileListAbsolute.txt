@@ -2,6 +2,5 @@ E:\progect_workspace\github\my_server\server_model\C#\client\client\bin\Debug\cl
 E:\progect_workspace\github\my_server\server_model\C#\client\client\bin\Debug\client.exe
 E:\progect_workspace\github\my_server\server_model\C#\client\client\bin\Debug\client.pdb
 E:\progect_workspace\github\my_server\server_model\C#\client\client\obj\Debug\client.csprojAssemblyReference.cache
-E:\progect_workspace\github\my_server\server_model\C#\client\client\obj\Debug\client.csproj.CoreCompileInputs.cache
 E:\progect_workspace\github\my_server\server_model\C#\client\client\obj\Debug\client.exe
 E:\progect_workspace\github\my_server\server_model\C#\client\client\obj\Debug\client.pdb

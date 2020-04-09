@@ -15,61 +15,69 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\c++\p_class.h">
+    <ClInclude Include="..\..\Language\c++\my_string.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\c++\sort.h">
+    <ClInclude Include="..\..\Language\c++\p_class.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\c++\stream.h">
+    <ClInclude Include="..\..\Language\c++\sort.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\c++\template.h">
+    <ClInclude Include="..\..\Language\c++\stream.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\c++\common.h">
+    <ClInclude Include="..\..\Language\c++\template.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\c++\my_string.h">
+    <ClInclude Include="..\..\Language\c++\common.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\c++\cppYuFa.h">
+    <ClInclude Include="..\..\Language\c++\cppYuFa.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\c++\sort.cpp">
+    <ClCompile Include="..\..\Language\c++\my_string.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\stream.cpp">
+    <ClCompile Include="..\..\Language\c++\p_class.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\template.cpp">
+    <ClCompile Include="..\..\Language\c++\sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\vector.cpp">
+    <ClCompile Include="..\..\Language\c++\stream.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\main.cpp">
+    <ClCompile Include="..\..\Language\c++\template.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\my_string.cpp">
+    <ClCompile Include="..\..\Language\c++\test_opencv.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\p_class.cpp">
+    <ClCompile Include="..\..\Language\c++\vector.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\DuoTai.cpp">
+    <ClCompile Include="..\..\Language\c++\cppyufa.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\c++\cppyufa.cpp">
+    <ClCompile Include="..\..\Language\c++\DuoTai.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Language\c++\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Language\c++\duoTai_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\c++\test.log" />
+    <Text Include="..\..\Language\c++\test.log" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\c++\Makefile" />
+    <None Include="..\..\Language\c++\Makefile" />
   </ItemGroup>
 </Project>

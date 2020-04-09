@@ -1,7 +1,7 @@
 CC=g++
 prom = main
-deps = process_schedule.h
-obj = main.o process_schedule.o
+deps = process_schedule.h pipe.h
+obj = main.o process_schedule.o pipe.o
 
 $(prom): $(obj)
 	$(CC) -o $(prom) $(obj)
