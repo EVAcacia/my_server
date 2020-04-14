@@ -1,4 +1,3 @@
-
 # go语言学习
 
 ## 1.基本语法
@@ -36,18 +35,17 @@ var  	变量名	   变量类型
    	}
    }
    ```
-   
 
 ### 2.变量赋值
-1. 标准格式
-var 变量名类型＝表达式
-例如：游戏中，玩家的血量初始值为 100 。可以这样写：
-var hp nt = 100
 
+1. 标准格式
+   var 变量名类型＝表达式
+   例如：游戏中，玩家的血量初始值为 100 。可以这样写：
+   var hp nt = 100
 2. 编译器推导类型的格式
-var hp = 100 
-等号右边的部分在编译原理里被称做“右值”。
-下面是编译器根据右值推导变量类型完成初始化的例子
+   var hp = 100 
+   等号右边的部分在编译原理里被称做“右值”。
+   下面是编译器根据右值推导变量类型完成初始化的例子
 
 ```go
  var attack = 40 
@@ -158,7 +156,9 @@ v的类型为 T,
 
 #### 2.创建指针的另外一种方法new()
 
-​	Go 还提供了另外 种方法来创建指针变 ，格式如下： 
+```
+Go 还提供了另外 种方法来创建指针变 ，格式如下： 
+```
 
 new(类型 )
 
@@ -181,6 +181,231 @@ new （）函数可以创建一个对应类型的指针，创建过程会分配�
 #### 2.堆空间
 
 
+
+### 7. 字符串
+
+#### 1.保存格式
+
+字符串一般utf-8保存， 一个汉字占用3个字符。
+
+#### 2.遍历字符
+
+以ascii打印字符。
+
+```go
+theme ：＝"犯击 start"
+for i := O; i < len(theme) ; i++ { 
+    fmt . Printf ("ascii %c %d\n ”， theme [i] , theme[i])
+}
+```
+
+打印汉字的时候就乱码。
+
+以unicode打印字符。 
+
+```go
+theme := "狙击 start"
+
+for _,s := range theme{
+
+	fmt.Printf("Unicode: %c %d\n",s,s)
+
+} 
+```
+
+就会以正常汉字打印了。
+
+#### 3.**总结：** 
+
+**• ASCII 字符串遍历直接使用下标** 
+
+**• Unicode 字符串遍历用 for range** 
+
+#### 4.字符串拼接
+
+```go
+hammer "吃我一锤"
+sickle "死吧”
+//声明字节缓
+var stringBuilder bytes.Buffer 
+//把字符串写入缓冲
+stringBuilder.WriteString(hammer) 
+stringBuilder.WriteString(sickle) 
+//将缓冲 字符串形式输出
+fmt.Println(stringBuilder.String())
+```
+
+#### 5.格式化
+
+预留
+
+#### 5.base64 ini文件读取写入操作等
+
+#### 6. 别名
+
+
+
+## **2.容器：存储和组织数据的方式**
+
+本章将以实用为目的，详细介绍数组、切片、映射，以及列表的增加、删除、修改和遍 
+
+历的使用方法
+
+### 1.数组-固定大小的连续空间
+
+1.**声明:** 
+
+*var 数组变量名［元素数量］T*
+
+· 数组变量名 数组声明及使用时的变量名。 
+
+· 元素数量 数组的元素数量。可以是一个表达式，但最终通过编译期计算的结果必须是整型数值。也就是说，元素数量不能含有到运行时才能确认大小的数值 
+
+· T 可以是任意基本类型，包括 为数组本身。但类型为数组本身时，可以实现多维数组。
+
+```go
+var team [3]string  //将 team 明为包含3个元素的字符串数组。
+```
+
+2. **初始化**
+
+定义时初始化：
+
+```go
+var team [3]string{"hammer","soldier","mum"}
+```
+
+遍历初始化：
+
+```go
+var team [3]string
+team[0] = "hammer"
+team[1] = "soldier" 
+team[2] = "mum" 
+
+for k,v := range team { 
+	fmt.Println(k , v) 
+}
+```
+
+### 2.切片(slice)-动态分配大小的连续空间
+
+### 3.映射(map)-建立食物关联的容器（无序的）
+
+1. 一般用法
+
+```go
+//使用时， 需要手动使用 make创建。如果不创建使用map类型，会触发岩机错误。
+scene := make(map[string]int)  
+//向map中加入映射关系，写法和数组一样，key可以是除函数外的任意类型。
+scene ["route"] = 66 
+//查找map中的值。
+fmt.Println(scene["route"])
+//查找一个不存在的值，会返回ValueType的默认值
+v := scene["route2"] 
+fmt.Println(v)
+```
+
+2. 判断值是否在map中有固定用法：
+
+```go
+v,ok := scene ["route"]
+```
+
+在默认获取键值的基础上，多取了一个变量 ok 可以判断键 route 是否存在于 map 中。
+
+3. 声明时填充内容的方式：
+
+```go
+m := map[string]string{
+	"W":"forward", 
+	"A":"left", 
+	"D":"right", 
+	"S":"backward",
+}
+```
+
+这种情况可以不是用make。 
+
+4. 遍历map。  
+
+可是使用for range 
+
+
+
+5. 需要在多进程或者多线程中使用的map——sync.Map
+
+### 4.列表（list)-可以快速增删的非连续性空间的容器
+
+1. 双链表支持从队列前方或后方插入元素，分 对应的方法是 PushFront和PushBack。
+2. 初始化列表（定义）
+
+通过container/list 包的New方法初始化list 
+
+```go
+变量名 := list.New()
+```
+
+通过声明初始化list 
+
+```go
+var 变量名 list.List
+```
+
+3. 添加元素
+
+```go
+//创建一个列表示例
+l := list.New()
+//将fist字符串插入到列表尾部，此时列表是空的，插入后只有一个元素。
+l.PushBack("fist")
+//将67放入列表，67将被放在fist的前面。
+l.PushFront(67)
+```
+
+4. 还有很多方法后边研究。
+
+## 3.流程控制
+
+
+
+## 4.函数
+
+1. 声明形式
+
+```go
+func 函数名（参数列表）（返回参数列表）｛
+	函数体
+}
+
+func foo ( a int, b string ) int
+//参数类型简写， 返回int类型
+func add (a,b int ）int { 
+	return a + b 
+}
+```
+
+2. 函数变量
+
+Go 语言中， 函数也是一种类型，可以和其他类型一样被保存在变量中。下面的代码定义了一个函数变量f,并将一个个函数名 fire()赋给函数变量f，这样调用函数变量f时，实际调用的就是fire()函数，代码如下：
+
+```go
+package main 
+
+import (
+	"fmt"
+)
+
+func fire() { 
+	fmt.Println("fire") 
+} 
+
+func main() { 
+	var f func() 
+	f = fire 
+	f () 
+}
+```
 
 
 
